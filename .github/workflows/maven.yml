@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v2
       - name: Set up JDK 11
         uses: actions/setup-java@v2
@@ -20,3 +21,14 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn -B -e verify
+=======
+    - uses: actions/checkout@v2
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: maven
+    - name: Build with Maven
+      run: mvn -B -e verify
+>>>>>>> d2e582e633f986f526d95085adfd9e3be8ef32e7
